@@ -12,6 +12,8 @@
 		6BEA2D8721902FFF00EA6037 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BEA2D8521902FFF00EA6037 /* Main.storyboard */; };
 		6BEA2D892190300200EA6037 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BEA2D882190300200EA6037 /* Assets.xcassets */; };
 		6BEA2D8C2190300200EA6037 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BEA2D8A2190300200EA6037 /* LaunchScreen.storyboard */; };
+		6BEA2D9421906D5F00EA6037 /* BeritaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA2D9321906D5F00EA6037 /* BeritaCell.swift */; };
+		6BEA2D9621906E7D00EA6037 /* Berita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA2D9521906E7D00EA6037 /* Berita.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		6BEA2D882190300200EA6037 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BEA2D8B2190300200EA6037 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BEA2D8D2190300200EA6037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BEA2D9321906D5F00EA6037 /* BeritaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeritaCell.swift; sourceTree = "<group>"; };
+		6BEA2D9521906E7D00EA6037 /* Berita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Berita.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +61,11 @@
 				6BEA2D8121902FFF00EA6037 /* AppDelegate.swift */,
 				6BEA2D8321902FFF00EA6037 /* ViewController.swift */,
 				6BEA2D8521902FFF00EA6037 /* Main.storyboard */,
+				6BEA2D9521906E7D00EA6037 /* Berita.swift */,
 				6BEA2D882190300200EA6037 /* Assets.xcassets */,
 				6BEA2D8A2190300200EA6037 /* LaunchScreen.storyboard */,
 				6BEA2D8D2190300200EA6037 /* Info.plist */,
+				6BEA2D9321906D5F00EA6037 /* BeritaCell.swift */,
 			);
 			path = "Portal Berita";
 			sourceTree = "<group>";
@@ -137,6 +143,8 @@
 			files = (
 				6BEA2D8421902FFF00EA6037 /* ViewController.swift in Sources */,
 				6BEA2D8221902FFF00EA6037 /* AppDelegate.swift in Sources */,
+				6BEA2D9621906E7D00EA6037 /* Berita.swift in Sources */,
+				6BEA2D9421906D5F00EA6037 /* BeritaCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

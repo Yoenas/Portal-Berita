@@ -1,24 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="obb-ul-YtY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="cAS-n0-8Uy">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="obb-ul-YtY" customClass="ViewController" customModule="Portal_Berita" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p59-gA-lhZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aP6-a7-Vyg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="skF-i2-e91">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellBerita" rowHeight="175" id="cvd-Sw-tlZ" customClass="BeritaCell" customModule="Portal_Berita" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="175"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cvd-Sw-tlZ" id="sJt-YQ-XAB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="174.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v6P-W4-Na8">
+                                                    <rect key="frame" x="15" y="27" width="180" height="125"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="125" id="F7i-D8-sF3"/>
+                                                        <constraint firstAttribute="width" constant="180" id="b2A-TG-hDf"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Judul Berita Judul Berita Judul Berita" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxd-jg-huI">
+                                                    <rect key="frame" x="211" y="27" width="148" height="41"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deskripsi Berita Deskripsi Berita Deskripsi Berita Deskripsi Berita Deskripsi Berita Deskripsi Berita " textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DK-ee-xkl">
+                                                    <rect key="frame" x="211" y="76" width="148" height="54"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="author" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHU-GB-LqB">
+                                                    <rect key="frame" x="211" y="140.5" width="149" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jHU-GB-LqB" firstAttribute="leading" secondItem="8DK-ee-xkl" secondAttribute="leading" id="03v-Zj-lwr"/>
+                                                <constraint firstItem="kxd-jg-huI" firstAttribute="top" secondItem="v6P-W4-Na8" secondAttribute="top" id="7nF-YO-2e3"/>
+                                                <constraint firstAttribute="bottom" secondItem="jHU-GB-LqB" secondAttribute="bottom" constant="16" id="FM5-Zw-gcK"/>
+                                                <constraint firstItem="8DK-ee-xkl" firstAttribute="centerX" secondItem="kxd-jg-huI" secondAttribute="centerX" id="HWX-Ki-RVk"/>
+                                                <constraint firstAttribute="trailing" secondItem="kxd-jg-huI" secondAttribute="trailing" constant="16" id="Id9-fj-qne"/>
+                                                <constraint firstItem="v6P-W4-Na8" firstAttribute="top" secondItem="sJt-YQ-XAB" secondAttribute="topMargin" constant="16" id="LCb-4I-H4M"/>
+                                                <constraint firstItem="8DK-ee-xkl" firstAttribute="width" secondItem="kxd-jg-huI" secondAttribute="width" id="eJf-5L-TpO"/>
+                                                <constraint firstItem="8DK-ee-xkl" firstAttribute="top" secondItem="kxd-jg-huI" secondAttribute="bottom" constant="8" id="gYc-Cd-CcW"/>
+                                                <constraint firstItem="v6P-W4-Na8" firstAttribute="leading" secondItem="sJt-YQ-XAB" secondAttribute="leadingMargin" id="hLM-qC-XYK"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="jHU-GB-LqB" secondAttribute="trailing" id="o9A-UB-n9d"/>
+                                                <constraint firstItem="kxd-jg-huI" firstAttribute="leading" secondItem="v6P-W4-Na8" secondAttribute="trailing" constant="16" id="utz-1X-t0f"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgBerita" destination="v6P-W4-Na8" id="5wL-p6-YAz"/>
+                                            <outlet property="lbAuthor" destination="jHU-GB-LqB" id="wgl-ya-gCh"/>
+                                            <outlet property="lbDeskripsi" destination="8DK-ee-xkl" id="r4k-f0-Azp"/>
+                                            <outlet property="lbJudul" destination="kxd-jg-huI" id="rRF-3M-2kt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="obb-ul-YtY" id="v48-uy-9hA"/>
+                                    <outlet property="delegate" destination="obb-ul-YtY" id="xTW-qo-MfK"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6M-l1-8Vm">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Portal Berita" id="siq-1N-hJo"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zOw-jn-D9Z" firstAttribute="trailing" secondItem="skF-i2-e91" secondAttribute="trailing" id="0uI-RV-xfZ"/>
+                            <constraint firstItem="u6M-l1-8Vm" firstAttribute="top" secondItem="zOw-jn-D9Z" secondAttribute="top" id="R94-de-nM0"/>
+                            <constraint firstItem="u6M-l1-8Vm" firstAttribute="leading" secondItem="zOw-jn-D9Z" secondAttribute="leading" id="VUf-aZ-h19"/>
+                            <constraint firstItem="aP6-a7-Vyg" firstAttribute="leading" secondItem="p59-gA-lhZ" secondAttribute="leading" id="Wri-0l-rG3"/>
+                            <constraint firstItem="skF-i2-e91" firstAttribute="leading" secondItem="zOw-jn-D9Z" secondAttribute="leading" id="aZH-t1-RcP"/>
+                            <constraint firstItem="u6M-l1-8Vm" firstAttribute="trailing" secondItem="zOw-jn-D9Z" secondAttribute="trailing" id="bep-Ub-cZC"/>
+                            <constraint firstItem="aP6-a7-Vyg" firstAttribute="top" secondItem="p59-gA-lhZ" secondAttribute="top" id="emq-Ip-rUH"/>
+                            <constraint firstItem="u6M-l1-8Vm" firstAttribute="top" secondItem="aP6-a7-Vyg" secondAttribute="bottom" id="giH-6n-433"/>
+                            <constraint firstItem="zOw-jn-D9Z" firstAttribute="bottom" secondItem="skF-i2-e91" secondAttribute="bottom" id="lIZ-lf-M4d"/>
+                            <constraint firstItem="skF-i2-e91" firstAttribute="top" secondItem="u6M-l1-8Vm" secondAttribute="bottom" id="pTG-mt-Mv4"/>
+                            <constraint firstAttribute="trailing" secondItem="aP6-a7-Vyg" secondAttribute="trailing" id="uQu-3v-sJz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zOw-jn-D9Z"/>
                     </view>
+                    <connections>
+                        <outlet property="tbViewBerita" destination="skF-i2-e91" id="EHD-zG-arJ"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NT0-hK-DCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="216.80000000000001" y="58.920539730134934"/>
         </scene>
     </scenes>
 </document>
