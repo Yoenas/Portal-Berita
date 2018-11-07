@@ -20,8 +20,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
 
+    
     func fetchBerita(){
-        let urlRequest = URLRequest(url: URL(string: "https://newsapi.org/v2/top-headlines?sources=bbc-sport&apiKey=45edc79fad7c497f957b65c3a95d605f")!)
+        let urlRequest = URLRequest(url: URL(string: "https://newsapi.org/v2/top-headlines?sources=techradar&apiKey=45edc79fad7c497f957b65c3a95d605f")!)
         
         let task = URLSession.shared.dataTask(with: urlRequest) {(data, response, error) in
             
@@ -43,13 +44,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                             let author = articleJSON["author"] as? String,
                             let desc = articleJSON["description"] as? String,
                             let url = articleJSON["url"] as? String,
-                            let urlImage = articleJSON["urlToImage"] as? String {
+                            let urlImage = articleJSON["urlToImage"] as? String,
+                            let cont = articleJSON["content"] as? String{
                             
                             berita.judul = title
                             berita.author = author
                             berita.deskripsi = desc
                             berita.url = url
                             berita.imgUrl = urlImage
+                            berita.content = cont
+                            
                         }
                         self.berita?.append(berita)
                     }
@@ -67,10 +71,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         task.resume()
     }
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.berita?.count ?? 0
     }
- 
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -78,13 +83,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.lbJudul.text = self.berita?[indexPath.item].judul
         cell.lbDeskripsi.text = self.berita?[indexPath.item].deskripsi
         cell.lbAuthor.text = self.berita?[indexPath.item].author
-        cell.imgBerita.downloadImage(from: (self.berita?[indexPath.item].imgUrl!)!)
+        cell.imgBerita.downloadImage(from: (self.berita?[indexPath.item].imgUrl)!)
+        
         return cell
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let story = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        let toNewsDetail = story.instantiateViewController(withIdentifier: "newsDetail") as! NewsDetailController
+        
+        toNewsDetail.accomodateTitle = self.berita?[indexPath.item].judul
+        toNewsDetail.accomodateCont = self.berita?[indexPath.item].content
+        toNewsDetail.accomodateImage = self.berita?[indexPath.item].imgUrl
+        
+        show(toNewsDetail, sender: self)
+    }
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 180
     }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

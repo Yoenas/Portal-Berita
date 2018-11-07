@@ -15,6 +15,5 @@ class Berita: NSObject {
     var author: String?
     var url: String?
     var imgUrl: String?
-    
-
+    var content: String?
 }

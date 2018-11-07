@@ -14,6 +14,7 @@ class BeritaCell: UITableViewCell {
     @IBOutlet weak var lbJudul: UILabel!
     @IBOutlet weak var lbDeskripsi: UILabel!
     @IBOutlet weak var lbAuthor: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
